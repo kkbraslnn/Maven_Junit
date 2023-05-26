@@ -1,9 +1,7 @@
 package day05_JUnit;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -27,6 +25,14 @@ public class C04_BeforeClassAfterClass {
     @AfterClass
     public static void tearDown(){
         System.out.println("Butun testlerden sonra calisti");
+    }
+    @Before
+    public void setUp01(){
+        System.out.println("her testten once calsir");
+    }
+    @After
+    public void tearDown01(){
+        System.out.println("her testten sonra calisir");
     }
     @Test
     public void test01(){
