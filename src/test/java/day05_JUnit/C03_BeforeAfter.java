@@ -23,12 +23,13 @@ public class C03_BeforeAfter {
         driver.close();
     }
     @Test
-    public void test01(){
+    public void test01() throws InterruptedException{
         driver.get("https://amazon.com");
+        Thread.sleep(3000);
     }
     @Test
-    public void test02(){
+    public void test02() throws InterruptedException{
         driver.get("htpps://techproeducation.com");
+        Thread.sleep(3000);
     }
-
 }
