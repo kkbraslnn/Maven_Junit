@@ -31,11 +31,11 @@ public class C06_ClassWork {
         driver.get("htpps://www.facebook.com");
         //cookies i kabul edin
         //"create an account " butonuna basin
-        driver.findElement(By.xpath("(//*[@role='button'])[2]")).click();
+       driver.findElement(By.xpath("(//*[@role='button'])[2]")).click();
         //"radio buttons" elementlerini locate edin
-        WebElement female = driver.findElement(By.xpath("//*[@id='u_c_4_8K']"));
-        WebElement male = driver.findElement(By.xpath("//*[@id='u_c_5_LO']"));
-        WebElement custom = driver.findElement(By.xpath("//*[@id='u_c_6_tb']"));
+        WebElement female = driver.findElement(By.xpath("//input[@value='1']"));
+        WebElement male = driver.findElement(By.xpath("//input[@value='2']"));
+        WebElement custom = driver.findElement(By.xpath("//input[@value='-1']"));
 
         //secili degilse cinsiyet butonundan size uygun olanini secin
         if (!female.isSelected()){
