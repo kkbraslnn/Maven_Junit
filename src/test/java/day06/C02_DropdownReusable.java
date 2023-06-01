@@ -25,7 +25,7 @@ WebDriver driver;
         driver.get("https://testcenter.techproeducation.com/index.php?page=dropdown");
     }
     //REUSABLE METHOD:Dropdown icin tekrar tekrar kullanabilecegimiz method olusturalim.
-    public void selectFromDropdown(WebElement dropdown,String secenek){
+    public void selectFromDropdown(WebElement dropdown,String Secenek){
         //selectFromDropdown(driver.findElement(By.xpath("//select[@id='year']")),"2005");
         //selectFromDropdown(driver.findElement(By.xpath("//select[@id='month']")),"January");
         //selectFromDropdown(driver.findElement(By.id("day")),"12");
@@ -33,18 +33,17 @@ WebDriver driver;
         //Gonderilen dropdown elemention tum options alinir.
        List<WebElement> options = dropdown.findElements(By.tagName("option"));//tum option tag li elementleri alir
        for (WebElement eachOption : options){
-           if(eachOption.getText().equals(secenek)){
+           if(eachOption.getText().equals(Secenek)){
                eachOption.click();
                break;
            }
        }
-
-
-
     }
 @Test
     public void selectFromDropdown(){
         selectFromDropdown(driver.findElement(By.xpath("//select[@id='year']")),"2005");
+        selectFromDropdown(driver.findElement(By.id("month")),"November" );
+        selectFromDropdown(driver.findElement(By.id("day")),"10" );
+
+   }
 }
-}
-//not :sonraki derste tekrar ve kullanimi
